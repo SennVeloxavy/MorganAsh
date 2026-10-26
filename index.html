@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>Morgan Ash | Interactive Design I | Spring 2026</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    </head>
+    <body class="blue">
+        
+        <div class="pagewrap1">
+            <!-- 
+            <h1 class="center">Morgan Ash</h1>
+        <div >
+            <img
+                class="profile-img"
+                src="assets/PastelPortrait2.jpg"
+                height="480px"
+                width="480px"
+                alt="colorful drawing of Morgan Ash" />
+            <div class="image-box">
+            </div>
+        </div>
+            <section id="about-me">
+                <h2>About Me</h2>
+                <h3>Background</h3>
+                <p>
+                    I have been a part-time graphic design student at <a href="https://www.tcc.edu/">TCC</a> for several
+                    years, taking a combination of online and in-person classes at the
+                    <a href="https://www.tcc.edu/come-to-tcc/norfolk-campus/visual-arts-center/">Visual Arts Center.</a>
+                    I may transfer to a different college after graduating but I haven't fully decided yet. My main
+                    passion is for drawing, but I'm interested in all kinds of arts. I've enjoyed working in digital
+                    design, sculpture, photography, videography, animation, and now website design. All art is important
+                    to me as self expression, storytelling, and boundless creativity.
+                </p>
+                <p>
+                    My art can be found on multiple websites collected on
+                    <a href="https://linktr.ee/sennveloxavy">Linktree.</a>
+                    I have a small business selling some of my art (primarily models) online and at events and I hope to
+                    continue building it after graduating. I maintain a daily balance of schoolwork, my part-time job,
+                    and personal artwork. In my other time, I enjoy watching anime, eating sweets, reading comics,
+                    playing overly time-consuming video games, looking at cats, petting cats, and thinking about cats.
+                </p>
+                <h3>Goals</h3>
+                <p>
+                    My main goal is to be a comic artist. I want to create my own website for art and portfolio work,
+                    along with blogging, so I can have better creative control for presenting and organizing my art.
+                    Having a better online store would also be helpful. I'm going to continue to work on my business,
+                    and I may find a different job in art or graphic design at the same time. Some designers I have been
+                    interested in recently are <a href="https://www.brucemaudesign.com/">Bruce Mau</a> and
+                    <a href="https://miggiebacungan.myportfolio.com/">Miggie Bacungan.</a>
+                </p>
+                
+            -->
+
+            
+            <div class="grid-3">
+                     <div class="head">
+                         <h2>Morgan <br/> Ash</h2>
+                    </div>
+                <div> <hr/> </div>
+                 <div class="menu">
+                      <a class="chiron" href="Portfolio/index.html">Portfolio</a><br />
+                 </div>
+                 <div class="menu">
+                      <a class="chiron" href="About/index.html">About</a><br />
+                 </div>
+                 <div class="menu">
+                    <a class="chiron" href="Contact/index.html">Contact</a><br />
+                </div>
+             </div>
+                <div>
+                    <img class="profile-img" src="assets/PastelPortrait2.jpg" alt="Colorful drawing of Morgan">
+                </div>
+        </div>
+        <!--
+            
+            <footer id="resources">
+                 <img
+                      class="eva-photo"
+                      src="assets/Evaphoto2.jpg"
+                      height="560"
+                      width=""
+                      alt="Photo of fursuit in front of a fountain" />
+                <h2 class="resource-h2">Resources</h2>
+                <ul class="grid-5">
+                    <li class="resource-item"><a href="http://brackets.io">Brackets</a></li>
+                    <li class="resource-item"><a href="https://cyberduck.io">Cyberduck</a></li>
+                    <li class="resource-item"><a href="https://www.w3schools.com">W3Schools</a></li>
+                    <li class="resource-item"><a href="https://www.w3schools.com">W3Schools</a></li>
+                    <li class="resource-item">
+                        <a href="https://www.w3schools.com/tags/default.asp">W3C HTML Reference</a>
+                    </li>
+                    <li class="resource-item"><a href="https://validator.w3.org/">W3C HTML Validator</a></li>
+                    <li class="resource-item"><a href="https://validator.w3.org/checklink">W3C Link Checker</a></li>
+                    <li class="resource-item">
+                        <a href="https://www.w3schools.com/cssref/default.asp">W3C CSS Reference</a>
+                    </li>
+                    <li class="resource-item"><a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validator</a></li>
+                    <li class="resource-item"><a href="https://fonts.google.com">Google Fonts</a></li>
+                </ul>
+            </footer>
+        </div>
+-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Add smooth scrolling to all links
+                $("a").on("click", function (event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $("html, body").animate(
+                            {
+                                scrollTop: $(hash).offset().top
+                            },
+                            800,
+                            function () {
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            }
+                        );
+                    } // End if
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/*  CSS Document */
+
+/*  Morgan Ash
+4/27/2026
+==================================================
+Table of Contents
+==================================================
+:: Layout
+:: Animation
+:: Current design
+:: Image gallery
+:: Grid Stuff
+:: Media Query
+
+/*	Layout
+================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');
+body { font-family: 'Afacad', sans-serif; color: #100; font-size: 1.3em; 
+    line-height: 1.6em; margin: 0; box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6 { font-family: "Bagel Fat One", system-ui; 
+    line-height: .75em; margin-bottom: .5em; margin-top: 40px; color: #ffbcec; }
+h1 { margin-bottom: 150px; margin-top: 170px; 
+    font-size: 8em; text-shadow: 8px 8px #641f64; }
+h2 { font-size: 4.5em;
+    text-align: center;
+    margin-top: 5px;
+    color: #ccccff;
+    text-shadow: 5px 5px #641f64;
+    line-height: 1em ;
+    
+}
+h3 { font-size: 2em; text-shadow: 3px 3px #641f64; line-height: 1em }
+h4 { font-size: 2em; }
+a:link { color: #ff9fd3; 
+        text-decoration: none;
+}
+a:visited { color: #ff9fd3; }       /*possible clicked color #a94ea9; */
+a:hover { color: #641f64; }
+a:active { color: #80ffbf; }
+ul, li { margin: 0; list-style-type: none; padding: 0;  }
+footer { font-size: .85em; }
+nav { padding: 20px 15px; background-color: #95ffca; width: 100vw; 
+    border-bottom: solid 8px #93E5BB;
+    
+    position: fixed; top: 0; left: 0; z-index: 5; 
+    font-size: 1.2em; font-family: 'Bagel Fat One', sans-serif; color: #ccccff;
+    word-spacing: 5%;
+}
+
+p {max-width: 1080px; }
+
+/*	Animation
+================================================== */
+
+ h1:hover, h2:hover, h3:hover { 
+    animation: bounce 0.5s; animation-iteration-count: infinite; }
+@keyframes bounce {
+    0% { transform: translate(0px, -1px) ; }
+    10% { transform: translate(0px, -2px) ; }
+    20% { transform: translate(0px, -3px) ; }
+    30% { transform: translate(0px, -5px) ; }
+    40% { transform: translate(0px, -7px) ; }
+    50% { transform: translate(0px, -9px) ; }
+    60% { transform: translate(0px, -7px) ; }
+    70% { transform: translate(0px, -5px) ; }
+    80% { transform: translate(0px, -3px) ; }
+    90% { transform: translate(0px, -2px) ; }
+    100% { transform: translate(0px, -1px) ; }
+}
+
+/*	Current Design
+================================================== */
+.blue {
+    background-color: #cdfefe; }
+  body {
+    color: #1e1e2f; }
+.center {
+   text-align: center;  }
+.center-img { margin:auto; display: block; border-radius: 25%}
+.profile-img { float: right; 
+                border-radius: 25%;
+                margin-top: 10px;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 30px;
+                
+               /* outline: solid 5px #cdfefe; */
+                
+                z-index: 2;
+                }
+.eva-photo {
+    float: left; 
+    margin-top: 152px;
+    margin-left: 30px;
+    border-radius: 25px;
+}
+.indent { text-indent: 30px; }
+/* needs different pagewrap on each page */
+.pagewrap1 { 
+    max-width: 1400px; 
+    margin: 0 40px 50px; }
+.chiron 
+    {font-family: "Chiron GoRound TC";
+    font-weight: 700; 
+    font-size: 1em;}
+
+/*
+.image-box {
+    float: right;
+    position: relative;
+    top: 60px;
+    left: 530px;
+    border: solid 5px #ff99ff;
+    background-color: #cdfefe;
+    border-radius: 25%;
+    width: 480px;
+    height: 480px;  
+    z-index: -1
+} 
+*/
+.pagewrap2 { 
+    max-width: 1400px; 
+    margin: 150px 40px 50px; }
+.abouth { font-family: "Bagel Fat One", system-ui; 
+    margin-bottom: .5em; margin-top: 40px; color: #ffbcec;
+    font-size: 2em; text-shadow: 3px 3px #641f64; line-height: 1em;
+    padding-top: 2em;
+    margin: 20px; 
+    max-width: 200px;
+    }
+.about2 {
+    max-width: 850px;
+    float: left;
+}
+
+
+/*	image gallery
+================================================== */
+div.gallery {
+  
+}
+
+div.gallery img:hover {
+  outline: 5px solid #95ffca;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+    margin-top: 40px;
+}
+
+div.desc {
+  padding: 15px 30px;
+  text-align: center;
+    margin-top:5px;
+    border: solid #fecdfe 5px;
+    border-radius: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99998%;
+}
+.responsive2 {
+    padding: 0 10px;
+    float: right;
+    width: 33.3332%;
+}
+
+@media only screen and (max-width: 850px) {
+  .responsive, .responsive2 {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive, .responsive2 {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*	Grid Stuff
+================================================== */
+.grid-3 {
+    display: inline-grid;
+    float: left;
+    align-content: center; 
+    justify-content: center;
+    max-width: 500px;
+    grid-template-rows: 36% 7% 12% 12% 12% ;
+    grid-gap: 8px;
+    padding: 1px 40px;
+    padding-bottom: 5px;
+    
+    border: 2px solid white; 
+    border-radius: 25px;
+    background-color: white;
+
+    margin-top: 30px;
+    margin-bottom: 10px; 
+    
+}
+
+.grid-3 div.head {
+    background-color: none;
+    text-align: center;
+    padding-bottom: 210px;
+}
+hr {
+    border: 3px solid #1e1e2f;
+    border-radius: 3px;
+    width: 300px
+}
+.grid-3 div.menu {
+        max-width: 200px;
+        padding-left: 100px;
+        
+        background-color: none;
+        font-family: "Chiron GoRound TC"; 
+        font-weight: 700;
+        font-size: 1.5em;
+        margin: 0;
+        
+}
+
+
+.grid-5 {
+    display: grid;
+    float: right;
+    grid-template-rows: 19% 19% 19% 19% 19%;
+    grid-template-columns: 49% 49%;
+    grid-gap: 24px;
+    padding: 30px; 
+    margin-top: 0;
+    margin-bottom: 100px;
+    max-width: 600px}
+.resource-h2 {
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+    .resource-item {
+        padding: 18px;
+        padding-top: 28px;
+        background-color: #80ffbf;
+        border-radius: 25px;
+        text-align: center;
+        font-family: "Chiron GoRound TC"; 
+        font-weight: 700; }
+
+@media only screen and (max-width: 1100px) {
+  .grid-5, .resource-item {
+    grid-template-columns: 98%;
+      grid-template-rows: min-content;
+      padding: 35px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid-5, .resource-item {  
+      grid-template-columns: 98%;
+      grid-template-rows: min-content;
+      padding-bottom: 35px;
+  }
+}
+
+
+/*	Media Query Stuff
+================================================== */
+@media only screen and (max-width: 1100px) {
+    .grid-2, .grid-3, .grid-5 { grid-template-columns: auto; }
+    .pagewrap {max-width: 90vw; }
+    
+    
+}
